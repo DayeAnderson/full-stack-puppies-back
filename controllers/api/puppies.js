@@ -118,7 +118,7 @@ async function update(req, res) {
 // }
 
 async function deleteOne(req, res) {
-    const deletedPuppy = await Puppy.findByIdAndRemove(req.params.id);
+    const deletedPuppy = await Puppy.findByIdAndDelete(req.params.id);
     res.status(200).json(deletedPuppy);
 }
 
@@ -126,7 +126,7 @@ async function deleteOne(req, res) {
 
 // async function delete(req, res) {
 //     try{
-//         const deletedPuppy = await Puppy.findByIdAndRemove(req.params.id);
+//         const deletedPuppy = await Puppy.findByIdAndDelete(req.params.id);
 //         res.status(200).json(deletedPuppy);
 //     }
 //     catch(err){

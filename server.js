@@ -3,7 +3,6 @@ const app = express();
 const logger = require('morgan');
 const port = process.env.PORT || 3001;
 
-require('dotenv').config();
 require('./config/database');
 
 var puppiesRouter = require('./routes/api/puppies');
